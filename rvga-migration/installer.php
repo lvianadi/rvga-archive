@@ -10,6 +10,7 @@ if ( $wpdb->get_var("SHOW TABLES LIKE '{$table_name}'") != $table_name ) {
     $sql = "CREATE TABLE $table_name (
             link varchar(255) NOT NULL,
             extension varchar(10) NOT NULL,
+            post_id bigint(20) NOT NULL,
             `created_at` datetime NOT NULL,
             `updated_at` datetime NOT NULL,
             PRIMARY KEY  (link)
